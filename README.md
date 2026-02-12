@@ -1,20 +1,55 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# NPad
 
-# Run and deploy your AI Studio app
+NPad is a browser-based writing and coding workspace built with React + Vite. It combines a rich Markdown editor, a Monaco-powered code editor, document organization tools, and in-app execution for multiple languages.
 
-This contains everything you need to run your app locally.
+## What The Website Does
 
-View your app in AI Studio: https://ai.studio/apps/drive/1ssBJtAtrXS69oPujVA8oGalNYgLAOejD
+- Create and manage drafts in a workspace-style UI
+- Write documents in rich mode with Markdown shortcuts and live preview
+- Switch to code mode with Monaco editor support
+- Run code directly in the browser (JavaScript, TypeScript, Python, JSON, Markdown, and more)
+- Step through and inspect MIPS programs with registers/memory views
+- Organize documents with collections, tags, archive, trash, starred, and recent views
+- Manage metadata like permissions, activity, and review status in the right panel
+- Save and reuse custom document templates
+- Export documents/code and share from the top bar actions
+
+## Tech Stack
+
+- React 19
+- TypeScript
+- Vite
+- Monaco Editor (`@monaco-editor/react`)
+- `marked` + `dompurify` for Markdown rendering/sanitization
+- `lucide-react` for UI icons
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
-
-
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+   ```bash
+   npm install
+   ```
+2. Start the dev server:
+   ```bash
+   npm run dev
+   ```
+3. Build production assets:
+   ```bash
+   npm run build
+   ```
+4. Preview the production build:
+   ```bash
+   npm run preview
+   ```
+
+## Project Structure
+
+- `App.tsx` - main app state and feature orchestration
+- `components/` - UI components (sidebar, editors, top bar, right panel, modals)
+- `types.ts` - shared TypeScript types
+- `public/` - static assets (logo, etc.)
+
+## Notes
+
+- Data is persisted client-side via browser storage.
+- No backend is required to run the current app locally.

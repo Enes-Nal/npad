@@ -1,3 +1,5 @@
+![NPad banner](public/readme-banner.png)
+
 # NPad
 
 NPad is a browser-based writing and coding workspace built with React + Vite. It combines a rich Markdown editor, a Monaco-powered code editor, document organization tools, and in-app execution for multiple languages.
